@@ -1,7 +1,5 @@
 ---
-layout: home
 title: "Startseite"
-permalink: /home
 ---
 
 # Herzlich Willkommen auf den Internetseiten von Reinhard Resch
