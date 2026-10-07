@@ -1,5 +1,6 @@
 ---
 title: "Startseite"
+layout: "default"
 ---
 
 # Herzlich Willkommen auf den Internetseiten von Reinhard Resch
