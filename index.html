@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bauland Berglicht – Baugrundstück im Neubaugebiet „Auf der Karsonick“</title>
 <meta name="description" content="Erschlossenes Baugrundstück auf dem Hunsrück: Neubaugebiet „Auf der Karsonick“ in Berglicht, Landkreis Bernkastel-Wittlich. Privatverkauf, 40 € pro m².">
-<meta name="author" content="Reinhard Resch">
+<meta name="author" content="Oliver Resch">
 <meta name="color-scheme" content="light dark">
 <style>
 :root{
@@ -44,6 +44,10 @@ nav a[aria-current="true"]{color:var(--forest-ink);background:var(--forest)}
 .hero .wrap{position:relative;z-index:1}
 .hero p{font-size:1.15rem;max-width:44ch;opacity:.92}
 .hero h1{max-width:14ch}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:2rem;align-items:center}
+@media(min-width:56rem){.hero-grid{grid-template-columns:6fr 5fr;gap:3rem}}
+.hero-img img{aspect-ratio:4/3;object-fit:cover;border:0;border-radius:.6rem;box-shadow:0 12px 32px rgba(0,0,0,.28)}
+.hero-img .ph{border-color:rgba(255,255,255,.4);color:inherit}
 .ridge{display:block;width:100%;height:auto;margin-top:2.5rem;color:var(--bg)}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:.6rem;overflow:hidden;margin:-1.6rem 0 0;position:relative;z-index:2}
 .facts div{background:var(--surface);padding:1rem 1.1rem}
@@ -112,10 +116,15 @@ footer p{max-width:none;font-size:.95rem}
 <main>
 <!-- START -->
 <div class="hero" id="start">
-  <div class="wrap">
-    <h1>Bauen im Grünen auf dem Hunsrück</h1>
-    <p>Erschlossenes Baugrundstück im Neubaugebiet „Auf der Karsonick“ in der Gemeinde Berglicht – direkt vom Eigentümer, ohne Makler.</p>
-    <a class="btn" href="#grundstueck">Grundstück ansehen</a>
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Bauen im Grünen auf dem Hunsrück</h1>
+      <p>Erschlossenes Baugrundstück im Neubaugebiet „Auf der Karsonick“ in der Gemeinde Berglicht – direkt vom Eigentümer, ohne Makler.</p>
+      <a class="btn" href="#grundstueck">Grundstück ansehen</a>
+    </div>
+    <figure class="hero-img">
+      <img src="img/P1010014.jpg" alt="Blick auf das Neubaugebiet Auf der Karsonick in Berglicht" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    </figure>
   </div>
   <svg class="ridge" viewBox="0 0 1200 90" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 90V52C90 30 170 22 260 40s170 36 270 12S700 6 800 26s190 30 270 6 90-14 130-8v34z"/></svg>
 </div>
@@ -154,8 +163,7 @@ footer p{max-width:none;font-size:.95rem}
       <p><a href="ort.karte.html">Interaktive Karte öffnen</a> und eine Anfahrtsroute berechnen.</p>
     </div>
     <figure>
-      <img src="img/uebersichtskarte.jpg" alt="Übersichtskarte: Lage von Berglicht im Hunsrück" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-      <div class="ph">Bild fehlt: <code>img/uebersichtskarte.jpg</code></div>
+      <img src="img/karte.jpg" alt="Übersichtskarte: Lage von Berglicht im Hunsrück" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
       <figcaption>Übersichtskarte Berglicht</figcaption>
     </figure>
   </div>
@@ -167,8 +175,7 @@ footer p{max-width:none;font-size:.95rem}
     <h2>Das Baugebiet „Auf der Karsonick“</h2>
     <p>Die Grafik zeigt die bebaute Ortslage und das Neubaugebiet im Überblick.</p>
     <figure>
-      <img src="img/baugebiet.jpg" alt="Grafik der bebauten Ortslage Berglicht und des Neubaugebiets Auf der Karsonick" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-      <div class="ph">Bild fehlt: <code>img/baugebiet.jpg</code></div>
+      <img src="img/Ortsplan.gif" alt="Grafik der bebauten Ortslage Berglicht und des Neubaugebiets Auf der Karsonick" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
       <figcaption>Ortslage und Neubaugebiet</figcaption>
     </figure>
   </div>
@@ -186,6 +193,7 @@ footer p{max-width:none;font-size:.95rem}
           <dt>Grundstück</dt><dd>Nr. 52</dd>
           <dt>Fläche</dt><dd>654 m²</dd>
           <dt>Preis</dt><dd>40,00 € je m²</dd>
+          <dt>Gesamt</dt><dd>ca. 26.160 €</dd>
           <dt>Eigentümer</dt><dd>Reinhard Resch</dd>
         </dl>
       </div>
