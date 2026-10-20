@@ -1,37 +1,253 @@
----
-title: "Startseite"
-layout: "default"
----
-<div class="row">
-    <div class="col-md-10">
-        <h3 class="pb-4 mb-4 fst-italic border-bottom">
-            Herzlich Willkommen auf den Internetseiten von Reinhard Resch
-        </h3>
-        <article class="blog-post">
-            <p>Auf den folgenden Seiten können Sie sich über im Privatbesitz befindliche Baugrundstücke im Neubaugebiet
-                "Auf der
-                Karsonick" in der Gemeinde Berglicht informieren.</p>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bauland Berglicht – Baugrundstück im Neubaugebiet „Auf der Karsonick“</title>
+<meta name="description" content="Erschlossenes Baugrundstück auf dem Hunsrück: Neubaugebiet „Auf der Karsonick“ in Berglicht, Landkreis Bernkastel-Wittlich. Privatverkauf, 40 € pro m².">
+<meta name="author" content="Reinhard Resch">
+<meta name="color-scheme" content="light dark">
+<style>
+:root{
+  --bg:#f6f5f0; --surface:#ffffff; --ink:#1f2a24; --muted:#5b665f; --line:#d9ddd3;
+  --forest:#2e4a3a; --forest-ink:#ffffff; --field:#c9a640; --slate:#3c4a52;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --navh:3.5rem;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#141a16;--surface:#1c241f;--ink:#e8ece6;--muted:#a3aea6;--line:#2d3832;--forest:#9cc3a9;--forest-ink:#10170f;--field:#d9b956;--slate:#9fb0b8}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--navh) + 1rem)}
+body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.65 var(--sans)}
+a{color:var(--forest)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--field);outline-offset:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;margin:0 0 .6em;font-weight:700}
+h1{font-size:clamp(2.2rem,6vw,4rem)}
+h2{font-size:clamp(1.6rem,3.5vw,2.3rem)}
+h3{font-size:1.2rem}
+p{max-width:62ch;margin:0 0 1em}
 
-            </p>Baugrundstücke sind erschlossen (ohne Endausbau Straße (endgültiger Teerbelag) und können sofort bebaut
-            werden. Die
-            im Register Grundstücke farblich markierten Baugrundstücke werden zu dem jeweils angegebenen Preis je
-            Quadratmeter
-            angeboten.</p>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-2">
-                        &nbsp;
-                    </div>
-                    <div class="col-2">
-                        <img src="P1010014.jpg" alt="Baugebiet &quot;Auf der Karsonik&quot;" width="500" height="375">
-                    </div>
-                    <div class="col-2">
-                        &nbsp;
-                    </div>
-                </div>
-            </div>
-            
-        </article>
-    </div>
+/* Navigation */
+header.nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);height:var(--navh)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:100%;gap:1rem}
+.brand{font-family:var(--serif);font-weight:700;text-decoration:none;color:var(--ink);white-space:nowrap}
+nav ul{list-style:none;display:flex;gap:.25rem;margin:0;padding:0;overflow-x:auto}
+nav a{display:block;padding:.45rem .75rem;border-radius:.4rem;text-decoration:none;color:var(--muted);font-size:.95rem;white-space:nowrap}
+nav a:hover{color:var(--ink)}
+nav a[aria-current="true"]{color:var(--forest-ink);background:var(--forest)}
 
+/* Hero */
+.hero{background:var(--forest);color:var(--forest-ink);padding:clamp(3rem,9vw,6.5rem) 0 0;position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:1}
+.hero p{font-size:1.15rem;max-width:44ch;opacity:.92}
+.hero h1{max-width:14ch}
+.ridge{display:block;width:100%;height:auto;margin-top:2.5rem;color:var(--bg)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:.6rem;overflow:hidden;margin:-1.6rem 0 0;position:relative;z-index:2}
+.facts div{background:var(--surface);padding:1rem 1.1rem}
+.facts b{display:block;font-family:var(--serif);font-size:1.7rem;color:var(--ink);line-height:1.1}
+.facts span{font-size:.88rem;color:var(--muted)}
+.btn{display:inline-block;margin-top:.5rem;padding:.8rem 1.3rem;border-radius:.4rem;background:var(--field);color:#1d1a0d;text-decoration:none;font-weight:600}
+.btn:hover{filter:brightness(1.06)}
+
+/* Sections */
+section{padding:clamp(3rem,8vw,5.5rem) 0}
+section+section{border-top:1px solid var(--line)}
+.cols{display:grid;grid-template-columns:1fr;gap:2rem}
+@media(min-width:56rem){.cols{grid-template-columns:5fr 6fr;gap:3.5rem}}
+.note{border-left:4px solid var(--field);padding:.3rem 0 .3rem 1rem;color:var(--muted);font-size:.95rem;max-width:62ch}
+
+/* Distances */
+.dist{list-style:none;margin:0;padding:0}
+.dist li{display:grid;grid-template-columns:minmax(8rem,12rem) 1fr 4.5rem;gap:.8rem;align-items:center;padding:.45rem 0;border-bottom:1px solid var(--line);font-size:.97rem}
+.dist .bar{height:.55rem;background:var(--line);border-radius:1rem;overflow:hidden}
+.dist .bar i{display:block;height:100%;background:var(--forest);border-radius:1rem}
+.dist em{font-style:normal;text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* Figures */
+figure{margin:0}
+figure img{display:block;width:100%;height:auto;border-radius:.5rem;border:1px solid var(--line);background:var(--surface)}
+figcaption{font-size:.88rem;color:var(--muted);margin-top:.5rem}
+.ph{display:none;padding:3rem 1rem;border:2px dashed var(--line);border-radius:.5rem;text-align:center;color:var(--muted);font-size:.9rem}
+
+/* Plot + contact */
+.plot{background:var(--surface);border:1px solid var(--line);border-radius:.6rem;padding:1.4rem 1.5rem}
+.plot dl{display:grid;grid-template-columns:auto 1fr;gap:.35rem 1.5rem;margin:0}
+.plot dt{color:var(--muted)}
+.plot dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+.tag{display:inline-block;background:var(--field);color:#1d1a0d;font-size:.85rem;font-weight:700;padding:.15rem .6rem;border-radius:1rem;margin-bottom:.8rem}
+.costs{padding-left:1.1rem;max-width:62ch}
+.costs li{margin-bottom:.4rem}
+address{font-style:normal;line-height:1.7}
+
+footer{background:var(--slate);color:#eef1ef;padding:3rem 0}
+footer a{color:#eef1ef}
+footer h2{font-size:1.4rem}
+footer p{max-width:none;font-size:.95rem}
+
+@media(max-width:40rem){.brand{display:none}.dist li{grid-template-columns:7.5rem 1fr 3.8rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#start">Bauland Berglicht</a>
+    <nav aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#start">Start</a></li>
+        <li><a href="#lage">Lage</a></li>
+        <li><a href="#ortsplan">Ortsplan</a></li>
+        <li><a href="#baugebiet">Baugebiet</a></li>
+        <li><a href="#grundstueck">Grundstück</a></li>
+        <li><a href="#kontakt">Preis &amp; Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- START -->
+<div class="hero" id="start">
+  <div class="wrap">
+    <h1>Bauen im Grünen auf dem Hunsrück</h1>
+    <p>Erschlossenes Baugrundstück im Neubaugebiet „Auf der Karsonick“ in der Gemeinde Berglicht – direkt vom Eigentümer, ohne Makler.</p>
+    <a class="btn" href="#grundstueck">Grundstück ansehen</a>
+  </div>
+  <svg class="ridge" viewBox="0 0 1200 90" preserveAspectRatio="none" aria-hidden="true"><path fill="currentColor" d="M0 90V52C90 30 170 22 260 40s170 36 270 12S700 6 800 26s190 30 270 6 90-14 130-8v34z"/></svg>
 </div>
+<div class="wrap">
+  <div class="facts">
+    <div><b>1 Grundstück</b><span>Nr. 52 noch verfügbar</span></div>
+    <div><b>654 m²</b><span>Grundstücksfläche</span></div>
+    <div><b>40 €/m²</b><span>aktueller Preis</span></div>
+    <div><b>0 €</b><span>Maklerprovision</span></div>
+  </div>
+</div>
+
+<!-- LAGE -->
+<section id="lage">
+  <div class="wrap cols">
+    <div>
+      <h2>Lage und Umgebung</h2>
+      <p>Berglicht liegt im Hunsrück und gehört zur Verbandsgemeinde Thalfang am Erbeskopf im <a href="http://www.bernkastel-wittlich.de/" rel="noopener">Landkreis Bernkastel-Wittlich</a>.</p>
+      <p>Die Hunsrückhöhenstraße, der Zubringer zum Flughafen Hahn, ist nur 4 km entfernt, die Autobahn A1/A48 nach etwa 15 km erreicht. Alle wichtigen Dienstleistungen gibt es in den Orten der Verbandsgemeinde und in den umliegenden Städten. Trier und Wittlich sind per Bus erreichbar.</p>
+      <p>Zur Verbandsgemeinde gehören neben Berglicht die Ortsgemeinden Büdlich, Breit, Burtscheid, Deuselbach, Dhronecken, Etgert, Gielert, Gräfendhron, Heidenburg, Hilscheid, Horath, Immert, Lückenburg, Malborn, Merschbach, Neunkirchen, Rorodt, Schönberg, Talling und Thalfang.</p>
+    </div>
+    <div>
+      <h3>Entfernungen ab Berglicht</h3>
+      <ul class="dist" id="dist"></ul>
+      <p class="note" style="margin-top:1rem">Freizeit: Wintersportgebiet Erbeskopf, Weinorte an der Mosel, Flugausstellung Hermeskeil und die Edelsteinstadt Idar-Oberstein sind alle in unter 35 km erreichbar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ORTSPLAN -->
+<section id="ortsplan">
+  <div class="wrap cols">
+    <div>
+      <h2>Ortsplan</h2>
+      <p>Berglicht liegt an der Verbindungsstraße zwischen der Hunsrückhöhenstraße (B 327) und dem Moselort Neumagen-Dhron und ist über ein gutes Straßennetz an die Orte und Städte der Umgebung angebunden.</p>
+      <p><a href="ort.karte.html">Interaktive Karte öffnen</a> und eine Anfahrtsroute berechnen.</p>
+    </div>
+    <figure>
+      <img src="img/uebersichtskarte.jpg" alt="Übersichtskarte: Lage von Berglicht im Hunsrück" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <div class="ph">Bild fehlt: <code>img/uebersichtskarte.jpg</code></div>
+      <figcaption>Übersichtskarte Berglicht</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- BAUGEBIET -->
+<section id="baugebiet">
+  <div class="wrap">
+    <h2>Das Baugebiet „Auf der Karsonick“</h2>
+    <p>Die Grafik zeigt die bebaute Ortslage und das Neubaugebiet im Überblick.</p>
+    <figure>
+      <img src="img/baugebiet.jpg" alt="Grafik der bebauten Ortslage Berglicht und des Neubaugebiets Auf der Karsonick" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <div class="ph">Bild fehlt: <code>img/baugebiet.jpg</code></div>
+      <figcaption>Ortslage und Neubaugebiet</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- GRUNDSTUECK -->
+<section id="grundstueck">
+  <div class="wrap cols">
+    <div>
+      <h2>Das Baugrundstück</h2>
+      <p>Die Grundstücke im Privatbesitz sind erschlossen* und können sofort bebaut werden. Die Umlegungskarte zeigt die angebotene Fläche farbig markiert.</p>
+      <div class="plot">
+        <span class="tag">Zu verkaufen</span>
+        <dl>
+          <dt>Grundstück</dt><dd>Nr. 52</dd>
+          <dt>Fläche</dt><dd>654 m²</dd>
+          <dt>Preis</dt><dd>40,00 € je m²</dd>
+          <dt>Eigentümer</dt><dd>Reinhard Resch</dd>
+        </dl>
+      </div>
+      <p class="note" style="margin-top:1.2rem">* ohne Endausbau der Straße (endgültiger Teerbelag).<br>Es steht nur noch das Baugrundstück Nr. 52 zum Verkauf.</p>
+    </div>
+    <figure>
+      <a href="img/lagebaugebiet.gif"><img src="img/lagebaugebiet.gif" alt="Auszug aus der Umlegungskarte mit farbig markiertem Baugrundstück Nr. 52" loading="lazy" onerror="this.style.display='none';this.parentNode.nextElementSibling.style.display='block'"></a>
+      <div class="ph">Bild fehlt: <code>img/lagebaugebiet.gif</code></div>
+      <figcaption>Auszug aus der Umlegungskarte (Gemeinde Berglicht, Gemarkung Berglicht 2361, Flur 16, Raka. Nr. 6917 C). Zum Vergrößern anklicken.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt">
+  <div class="wrap cols">
+    <div>
+      <h2>Preis und Kontakt</h2>
+      <p>Der aktuelle Preis beträgt <strong>40,00 € je Quadratmeter</strong> Bauland. Interesse? Melden Sie sich gern direkt beim Eigentümer.</p>
+      <address>
+        <strong>Reinhard Resch</strong><br>
+        Mozartstr. 5<br>
+        66299 Friedrichsthal<br>
+        Telefon: <a href="tel:+49689786827">+49 6897 86827</a><br>
+        E-Mail: <a id="mail" href="#">E-Mail-Adresse anzeigen</a>
+      </address>
+    </div>
+    <div>
+      <h3>Nebenkosten</h3>
+      <ul class="costs">
+        <li>Verkauf von privat an privat: <strong>keine Maklercourtage</strong>.</li>
+        <li>Notar- und Grundbuchkosten trägt der Käufer.</li>
+        <li>Eine eventuell anfallende Grunderwerbsteuer trägt ebenfalls der Käufer.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="impressum">
+  <div class="wrap">
+    <h2>Impressum</h2>
+    <p>Angaben gemäß § 5 DDG<br>Reinhard Resch, Mozartstr. 5, 66299 Friedrichsthal<br>Telefon: +49 6897 86827 · E-Mail: <span id="mail2"></span></p>
+    <p>Diese Seite setzt keine Cookies und bindet keine externen Dienste ein.</p>
+  </div>
+</footer>
+
+<script>
+// Entfernungen (km) – Balken relativ zu 60 km
+const orte=[["Hunsrückhöhenstraße (B 327)",4],["Neumagen-Dhron",15],["Erbeskopf",15],["Autobahn A1/A48",15],["Hermeskeil",22],["Bernkastel-Kues",30],["Trier",30],["Idar-Oberstein",33],["Wittlich",35],["Luxemburg",60]];
+document.getElementById("dist").innerHTML=orte.map(([n,k])=>`<li><span>${n}</span><span class="bar"><i style="width:${k/60*100}%"></i></span><em>${k} km</em></li>`).join("");
+
+// E-Mail-Adresse erst per Script zusammensetzen (Schutz vor Spam-Crawlern)
+const addr=["bauland-berglicht","vodafonemail.de"].join("@");
+const m=document.getElementById("mail");m.textContent=addr;m.href="mailto:"+addr;
+document.getElementById("mail2").textContent=addr;
+
+// Aktiven Menüpunkt beim Scrollen markieren
+const links=[...document.querySelectorAll("nav a")];
+const secs=links.map(a=>document.querySelector(a.getAttribute("href")));
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.removeAttribute("aria-current"));links[secs.indexOf(e.target)].setAttribute("aria-current","true")}})},{rootMargin:"-45% 0px -50% 0px"});
+secs.forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
